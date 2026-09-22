@@ -1,0 +1,21 @@
+dataset,fold,step,n_features,inner_score,outer_auc,recommended,last,seconds_total
+gbm_mirna,1,Step 0 (Reference),325,0.8630671821478308,0.8862678267054163,False,False,1802.7
+gbm_mirna,1,Step 1 (Data Cleaning),184,0.8672420945132683,0.8703966940121889,False,False,1802.7
+gbm_mirna,1,Step 2 (Regularization),176,0.8672556497394274,0.8706134348673803,False,False,1802.7
+gbm_mirna,1,Step 3 (Wrappers),16,0.8683137666953125,0.8441437050117108,True,True,1802.7
+gbm_mirna,2,Step 0 (Reference),325,0.8492214567772456,0.8742952842952842,False,False,1802.7
+gbm_mirna,2,Step 1 (Data Cleaning),199,0.8512368468161838,0.8766422466422468,False,False,1802.7
+gbm_mirna,2,Step 2 (Regularization),182,0.8515817809653471,0.8768593868593868,False,False,1802.7
+gbm_mirna,2,Step 3 (Wrappers),30,0.8635220535616235,0.8749290499290499,True,True,1802.7
+gbm_mirna,3,Step 0 (Reference),325,0.8585482871884991,0.9204548666313371,False,False,1802.7
+gbm_mirna,3,Step 1 (Data Cleaning),155,0.8592407479330234,0.9424898427839604,False,False,1802.7
+gbm_mirna,3,Step 2 (Regularization),151,0.8610068581302748,0.9212082670906201,False,False,1802.7
+gbm_mirna,3,Step 3 (Wrappers),15,0.8769915333304766,0.8933395159865748,True,True,1802.7
+gbm_mirna,4,Step 0 (Reference),325,0.887622994352927,0.701694930224342,False,False,1802.7
+gbm_mirna,4,Step 1 (Data Cleaning),164,0.8910208246957468,0.7182264617558735,False,False,1802.7
+gbm_mirna,4,Step 2 (Regularization),161,0.8915484530299637,0.7064432079137961,False,False,1802.7
+gbm_mirna,4,Step 3 (Wrappers),17,0.8856997227203887,0.704864864864865,True,True,1802.7
+gbm_mirna,5,Step 0 (Reference),325,0.8625594199111262,0.858921263921264,False,False,1802.7
+gbm_mirna,5,Step 1 (Data Cleaning),153,0.868695917554763,0.8579289691789691,False,False,1802.7
+gbm_mirna,5,Step 2 (Regularization),153,0.868695917554763,0.8579289691789691,False,False,1802.7
+gbm_mirna,5,Step 3 (Wrappers),15,0.8499512939818115,0.8673680717430718,True,True,1802.7

@@ -1,0 +1,13 @@
+scenario,seed,role,n_after_s2,s3_ran,last_step,last_n,last_f1,last_precision,last_recall,rec_step,rec_n,rec_f1,rec_precision,rec_recall,rec_quality,rec_weighted_auc,rescued,seconds,error
+omics_standard,0,terminal,8,False,last,8,0.8889,1.0,0.8,Step 2 (Regularization),8,0.8889,1.0,0.8,RECOMMENDED,0.9893,False,138.1,
+omics_standard,0,prefilter,14,False,last,14,0.8333,0.7143,1.0,Step 2 (Regularization),14,0.8333,0.7143,1.0,RECOMMENDED,0.9896,False,140.9,
+omics_standard,1,terminal,10,False,last,10,1.0,1.0,1.0,Step 2 (Regularization),10,1.0,1.0,1.0,RECOMMENDED,0.9969,False,72.7,
+omics_standard,1,prefilter,18,False,last,18,0.7143,0.5556,1.0,Step 1 (Data Cleaning),620,0.0317,0.0161,1.0,RECOMMENDED,0.9966,False,72.2,
+omics_multiclass,0,terminal,26,False,last,26,0.6316,0.4615,1.0,Step 2 (Regularization),26,0.6316,0.4615,1.0,RECOMMENDED,0.9893,False,489.9,
+omics_multiclass,0,prefilter,72,True,last,12,1.0,1.0,1.0,Step 3 (Wrappers),12,1.0,1.0,1.0,RECOMMENDED,0.989,False,2310.9,
+omics_multiclass,1,terminal,20,False,last,20,0.75,0.6,1.0,Step 2 (Regularization),20,0.75,0.6,1.0,RECOMMENDED,0.9906,False,737.4,
+omics_multiclass,1,prefilter,62,True,last,11,0.9565,1.0,0.9167,Step 2 (Regularization),62,0.3243,0.1935,1.0,RECOMMENDED,0.9907,False,2687.1,
+omics_high_dim,0,terminal,6,False,last,6,0.9091,0.8333,1.0,Step 2 (Regularization),6,0.9091,0.8333,1.0,RECOMMENDED,0.9958,False,112.1,
+omics_high_dim,0,prefilter,23,False,last,23,0.3571,0.2174,1.0,Step 2 (Regularization),23,0.3571,0.2174,1.0,RECOMMENDED,0.9941,False,112.5,
+omics_high_dim,1,terminal,6,False,last,6,0.7273,0.6667,0.8,Step 2 (Regularization),6,0.7273,0.6667,0.8,RECOMMENDED,0.9979,False,147.3,
+omics_high_dim,1,prefilter,29,False,last,29,0.2941,0.1724,1.0,Step 2 (Regularization),29,0.2941,0.1724,1.0,RECOMMENDED,0.9975,False,146.1,

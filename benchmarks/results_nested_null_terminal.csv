@@ -1,0 +1,21 @@
+dataset,fold,step,n_features,inner_score,outer_auc,recommended,last,gt_f1,gt_precision,gt_recall,seconds_total
+null_terminal,1,Step 0 (Reference),2000,0.47195980003166055,0.68,False,False,,,,1956.3
+null_terminal,1,Step 1 (Data Cleaning),578,0.6241940434333648,0.74,False,False,,,,1956.3
+null_terminal,1,Step 2 (Regularization),22,0.8253858950100967,0.5399999999999999,True,False,,,,1956.3
+null_terminal,1,Step 3 (Wrappers),22,0.8253858950100967,0.5399999999999999,False,True,,,,1956.3
+null_terminal,2,Step 0 (Reference),2000,0.47337956328256015,0.63,False,False,,,,1956.3
+null_terminal,2,Step 1 (Data Cleaning),601,0.558683997435358,0.71,False,False,,,,1956.3
+null_terminal,2,Step 2 (Regularization),17,0.7458205187400355,0.43999999999999995,True,False,,,,1956.3
+null_terminal,2,Step 3 (Wrappers),17,0.7458205187400355,0.43999999999999995,False,True,,,,1956.3
+null_terminal,3,Step 0 (Reference),2000,0.517590064757967,0.6,False,False,,,,1956.3
+null_terminal,3,Step 1 (Data Cleaning),550,0.6553978476212899,0.41000000000000003,False,False,,,,1956.3
+null_terminal,3,Step 2 (Regularization),25,0.8883504862369027,0.46,True,False,,,,1956.3
+null_terminal,3,Step 3 (Wrappers),25,0.8883504862369027,0.46,False,True,,,,1956.3
+null_terminal,4,Step 0 (Reference),2000,0.6154233150058844,0.45,False,False,,,,1956.3
+null_terminal,4,Step 1 (Data Cleaning),608,0.6755281988028758,0.51,False,False,,,,1956.3
+null_terminal,4,Step 2 (Regularization),20,0.8608376380637712,0.36,True,False,,,,1956.3
+null_terminal,4,Step 3 (Wrappers),20,0.8608376380637712,0.36,False,True,,,,1956.3
+null_terminal,5,Step 0 (Reference),2000,0.6405682966029571,0.48,False,False,,,,1956.3
+null_terminal,5,Step 1 (Data Cleaning),596,0.6885647952149258,0.45999999999999996,False,False,,,,1956.3
+null_terminal,5,Step 2 (Regularization),20,0.8691078384979314,0.5,True,False,,,,1956.3
+null_terminal,5,Step 3 (Wrappers),20,0.8691078384979314,0.5,False,True,,,,1956.3
