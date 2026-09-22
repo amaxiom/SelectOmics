@@ -1,0 +1,21 @@
+# SelectOmics runtime dependencies.
+# Install with: pip install -r requirements.txt
+#
+# Keep these bounds in sync with [project.dependencies] in pyproject.toml.
+
+numpy>=1.24.0
+pandas>=1.5.0
+scikit-learn>=1.4.0   # first release whose RandomForest accepts NaN inputs
+scipy>=1.9.0
+xgboost>=2.0.0        # first release with the XGBClassifier(device=...) argument
+matplotlib>=3.6.0
+openpyxl>=3.0.0
+pyarrow>=8.0.0
+pyyaml>=6.0           # YAML configs used by the CLI (template / run --config)
+
+# Optional: enhanced confusion-matrix plots
+# seaborn>=0.11.0
+
+# Optional: HDF5 and Parquet I/O backends
+# tables>=3.7.0
+# fastparquet>=0.8.0

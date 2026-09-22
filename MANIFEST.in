@@ -1,0 +1,37 @@
+# Files to include in the source distribution beyond the package itself.
+#
+# The wheel contains only the SelectOmics package (see
+# [tool.setuptools.packages.find] in pyproject.toml).  The sdist additionally
+# carries the licence, changelog, docs, and test suite so the release is
+# self-describing and reviewable.
+
+include LICENSE
+include CHANGELOG.md
+include README.md
+include requirements.txt
+
+recursive-include docs *.md
+recursive-include tests *.py
+
+# Large benchmark inputs, notebooks, generated results, and caches never ship.
+exclude benchmarks/*.csv
+recursive-exclude benchmarks *.ipynb
+recursive-exclude benchmarks *.csv
+prune benchmarks/results_lgg
+prune examples
+prune user_guide
+
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude .selectomics_checkpoint.pkl
+
+# Jupyter autosaves. 'prune' takes no wildcards and 'global-exclude' matches
+# file names rather than directories, so the checkpoint files are excluded by
+# their name suffix and each known checkpoint directory is pruned by hand.
+global-exclude *-checkpoint.py
+global-exclude *-checkpoint.ipynb
+prune .ipynb_checkpoints
+prune tests/.ipynb_checkpoints
+prune SelectOmics/.ipynb_checkpoints
+prune SelectOmics/selection/.ipynb_checkpoints
+prune benchmarks/.ipynb_checkpoints

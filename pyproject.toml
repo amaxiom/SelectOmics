@@ -1,0 +1,87 @@
+[build-system]
+# setuptools >= 77 is required for the PEP 639 SPDX 'license' expression below.
+requires = ["setuptools>=77.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SelectOmics"
+version = "0.7.1"
+description = "A machine learning pipeline for feature selection in high-dimensional omics data classification."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+# 3.9 is the floor imposed by scikit-learn >= 1.4 and numpy >= 1.24.
+requires-python = ">=3.9"
+authors = [
+    { name = "Amanda S Barnard" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=1.5.0",
+    # 1.4 is the first release whose RandomForest accepts NaN inputs, which
+    # handle_nans() relies on when it leaves algorithm='RF' unchanged.
+    "scikit-learn>=1.4.0",
+    "scipy>=1.9.0",
+    # 2.0 introduced the XGBClassifier(device=...) argument used throughout.
+    "xgboost>=2.0.0",
+    "matplotlib>=3.6.0",
+    "openpyxl>=3.0.0",
+    "pyarrow>=8.0.0",
+    # The CLI advertises YAML configs ('selectomics template', 'run --config
+    # x.yaml'), so PyYAML is a hard requirement rather than an extra.
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+selectomics = "SelectOmics.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+viz = [
+    "seaborn>=0.11.0",
+]
+io = [
+    "tables>=3.7.0",
+    "fastparquet>=0.8.0",
+]
+
+[project.urls]
+Source = "https://github.com/amaxiom/SelectOmics"
+Changelog = "https://github.com/amaxiom/SelectOmics/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+# 'benchmarks' carries the harnesses, not library code, and pulls in large
+# input files; it is distributed with the source tree, not the wheel.
+exclude = ["tests*", "examples*", "benchmarks*", "docs*", "user_guide*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short -q -m 'not slow'"
+markers = [
+    "slow: marks tests that run the full pipeline or slow steps (deselect with '-m not slow')",
+    "integration: marks tests that fit real ML models on synthetic data",
+]
+
+[tool.coverage.run]
+source = ["SelectOmics"]
+omit = ["tests/*", "examples/*", "setup.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

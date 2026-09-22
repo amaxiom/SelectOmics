@@ -1,0 +1,102 @@
+# ---------------------------------------------------------------------------
+# Python build and packaging
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------------------------------------------------------------------------
+# Test and coverage
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ---------------------------------------------------------------------------
+# Environments and editors
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Jupyter
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+*-checkpoint.py
+
+# ---------------------------------------------------------------------------
+# Pipeline output
+#
+# Every run writes a results directory and a checkpoint. Neither is an input
+# to anything: a notebook regenerates its own, and a checkpoint is only valid
+# against the data fingerprint and package version that produced it.
+#
+# Scoped to examples/ and the default output directory on purpose. The
+# benchmark result directories are NOT ignored: BENCHMARKS.md cites
+# results_full_5seed/benchmark_raw.csv and results_lgg/benchmark_lgg_10fold.csv
+# as the raw output behind every number on the page, so they are evidence
+# rather than build products.
+# ---------------------------------------------------------------------------
+.selectomics_checkpoint.pkl
+selectomics_results/
+examples/**/results_*/
+
+# ---------------------------------------------------------------------------
+# Derived example data
+#
+# None of the MLOmics data is committed. examples/mlomics_data.py downloads it
+# from a pinned, immutable dataset revision, verifies each file against a
+# recorded SHA-256, and caches it here. The notebooks then build their own
+# model-ready CSVs from that cache. All of it is reproducible from the pinned
+# revision, and committing it would re-distribute third-party CC-BY data under
+# this repository's licence.
+# ---------------------------------------------------------------------------
+examples/.mlomics_cache/
+examples/**/*_aligned.csv
+examples/**/*_merged.csv
+examples/**/*label_num.csv
+examples/**/*_input.csv
+examples/**/*_quickstart.csv
+examples/**/*_showcase.csv
+examples/**/resume_probe.csv
+benchmarks/LGG_merged.csv
+benchmarks/*label_num.csv
+
+# ---------------------------------------------------------------------------
+# Benchmark console logs
+#
+# Every benchmark writes its results to CSV, and those CSVs are what
+# BENCHMARKS.md cites. The .log files are the console output of producing them:
+# useful while a run was in progress, evidence of nothing that the CSVs do not
+# already record.
+# ---------------------------------------------------------------------------
+benchmarks/**/*.log
+
+# ---------------------------------------------------------------------------
+# LaTeX build products
+#
+# The user guide's PDF is committed deliberately, so readers do not need a
+# TeX installation. Everything latexmk generates on the way is not.
+# ---------------------------------------------------------------------------
+*.aux
+*.fls
+*.fdb_latexmk
+*.toc
+*.lof
+*.lot
+*.out
+*.synctex.gz
+user_guide/*.log

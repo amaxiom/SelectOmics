@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "SelectOmics: reproducible, leakage-proof feature selection for small-n, large-p classification"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - given-names: "Amanda S."
+    family-names: Barnard
+    orcid: "https://orcid.org/0000-0002-4784-2382"
+    affiliation: "School of Computing, Australian National University"
+version: 0.7.1
+date-released: "2026-09-23"
+license: Apache-2.0
+repository-code: "https://github.com/amaxiom/SelectOmics"
+url: "https://github.com/amaxiom/SelectOmics"
+abstract: >-
+  A feature-selection pipeline for classification in the small-n, large-p
+  regime typical of omics. Features must survive three independent selection
+  criteria, data cleaning, regularisation and wrapper methods, each decided by
+  consensus across many independently seeded models, and each step reports the
+  level of model agreement its panel actually holds at rather than one the user
+  requested. A mandatory evaluation re-validates every step's panel and
+  recommends one, and the held-out test set is touched once, on that panel, so
+  the reported performance comes from samples no part of the selection has
+  seen. On a pre-registered benchmark it returns short panels at a precision of
+  0.970 and few false positives on data with no signal, at the cost of recall
+  and runtime.
+keywords:
+  - feature selection
+  - omics
+  - biomarker discovery
+  - consensus
+  - high-dimensional data
+  - machine learning
+  - scikit-learn
+  - Python
